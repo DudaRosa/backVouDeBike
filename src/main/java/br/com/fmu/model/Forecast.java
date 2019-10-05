@@ -13,13 +13,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Component
 @Entity
-@Table(name = "FORECAST")
+@Table(name = "forecast")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Forecast {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(insertable = false, updatable = false)
 	int id;
 	@Column
 	private String date;

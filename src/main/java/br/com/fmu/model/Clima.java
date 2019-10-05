@@ -2,11 +2,11 @@ package br.com.fmu.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -16,13 +16,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Component
 @Entity
-@Table(name = "CLIMA")
+@Table(name = "clima")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Clima {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(insertable = false, updatable = false)
 	private int id;
 	@Column
 	private int temp;
@@ -36,16 +36,16 @@ public class Clima {
 	private String currently;
 	@Column
 	private int humidity;
-	@Column
+	@Column(name = "wind_speedy")
 	private String windSpeedy;
 	@Column
 	private String sunrise;
 	@Column
 	private String sunset;
-	@Column
+	@Column(name = "city_name")
 	private String cityName;
-	@JoinTable(name = "FORECAST", joinColumns = { @JoinColumn(name = "forecast", referencedColumnName = "id")})
-	@OneToOne(targetEntity = Forecast.class)
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "forecast_id", unique = true, nullable = false)
 	private Forecast forecast;
 	
 	public Clima() {};
