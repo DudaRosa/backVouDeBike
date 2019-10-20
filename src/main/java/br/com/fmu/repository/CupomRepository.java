@@ -13,7 +13,11 @@ public interface CupomRepository extends CrudRepository<Cupom, Integer>{
 	
 	@Query(value = "SELECT * FROM dbo.cupom", nativeQuery = true)
 	List<Cupom> findAll();
-
+	
+	@Query(value = "SELECT * FROM dbo.cupom WHERE parceiro LIKE %:parceiro%", nativeQuery = true)
+	Cupom findByParceiro(String parceiro);
+	
+	
 	@Query(value = "SELECT * FROM dbo.cupom WHERE id = :id", nativeQuery = true)
 	Cupom findById(int id);
 

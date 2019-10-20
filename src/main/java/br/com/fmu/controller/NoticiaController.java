@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.fmu.dto.NoticiaDto;
+import br.com.fmu.mapper.NoticiaMapper;
 import br.com.fmu.model.Noticia;
 import br.com.fmu.service.NoticiaService;
 
@@ -26,10 +28,17 @@ public class NoticiaController {
 	private NoticiaService noticiaService;
 
 	@GetMapping("/listar")
-	public ResponseEntity<List<Noticia>> findAll() {
-		List<Noticia> lista = noticiaService.findAll();
-		return new ResponseEntity<List<Noticia>>(lista, HttpStatus.OK);
+	public ResponseEntity<List<NoticiaDto>> findAll() {
+		List<NoticiaDto> lista = NoticiaMapper.convertToListDto((noticiaService.findAll()));
+		return new ResponseEntity<List<NoticiaDto>>(lista, HttpStatus.OK);
 	}
+	
+	@GetMapping("/listar/{dia}")
+	public ResponseEntity<List<NoticiaDto>> findByDia(@PathVariable("dia") String dia) {
+		List<NoticiaDto> lista = NoticiaMapper.convertToListDto((noticiaService.findByDia(dia)));
+		return new ResponseEntity<List<NoticiaDto>>(lista, HttpStatus.OK);
+	}
+	
 
 	@GetMapping("/selecionar/{id}")
 	public ResponseEntity<Noticia> findById(@PathVariable("id") int id) {

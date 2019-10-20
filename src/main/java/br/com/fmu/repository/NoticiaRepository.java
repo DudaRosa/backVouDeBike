@@ -14,6 +14,10 @@ public interface NoticiaRepository extends CrudRepository<Noticia, Integer> {
 
 	@Query(value = "SELECT * FROM dbo.noticia", nativeQuery = true)
 	List<Noticia> findAll();
+	
+	@Query(value = "SELECT * FROM dbo.noticia WHERE dia LIKE :dia%", nativeQuery = true)
+	List<Noticia> findbyDia(String dia);
+	
 
 	@Query(value = "SELECT * FROM dbo.noticia WHERE id = :id", nativeQuery = true)
 	Noticia findById(int id);

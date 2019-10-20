@@ -23,6 +23,12 @@ public class CupomService implements CrudService<Cupom>{
 		cupomRepository.findAll().forEach(cupom -> cupons.add(cupom));
 		return cupons;
 	}
+	
+	public List<Cupom> findByParceiro(String parceiro) {
+		List <Cupom> cupons = new ArrayList<>();
+		cupons.add(cupomRepository.findByParceiro(parceiro));
+		return cupons;
+	}
 
 	@Override
 	public Cupom findById(int id) {

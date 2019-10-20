@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.fmu.dto.CupomDto;
+import br.com.fmu.mapper.CupomMapper;
 import br.com.fmu.model.Cupom;
 import br.com.fmu.service.CupomService;
 
@@ -25,10 +27,17 @@ public class CupomController {
 	private CupomService cupomService;
 	
 	@GetMapping("/listar")
-	public ResponseEntity<List<Cupom>> findAll() {
-		List<Cupom> lista = cupomService.findAll();
-		return new ResponseEntity<List<Cupom>>(lista, HttpStatus.OK);
+	public ResponseEntity<List<CupomDto>> findAll() {
+		List<CupomDto> lista = CupomMapper.convertToListDto(cupomService.findAll());
+		return new ResponseEntity<List<CupomDto>>(lista, HttpStatus.OK);
 	}
+	
+	@GetMapping("/listar/{parceiro}")
+	public ResponseEntity<List<CupomDto>> findByParceiro(@PathVariable("parceiro") String parceiro) {
+		List<CupomDto> lista = CupomMapper.convertToListDto(cupomService.findByParceiro(parceiro));
+		return new ResponseEntity<List<CupomDto>>(lista, HttpStatus.OK);
+	}
+	
 
 	@GetMapping("/selecionar/{id}")
 	public ResponseEntity<Cupom> findById(@PathVariable("id") int id) {

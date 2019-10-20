@@ -23,6 +23,12 @@ public class NoticiaService implements CrudService<Noticia> {
 		noticiaRepository.findAll().forEach(noticia -> noticias.add(noticia));
 		return noticias;
 	}
+	
+	public List<Noticia> findByDia(String dia) {
+		List<Noticia> noticias = noticiaRepository.findbyDia(dia);
+		return noticias;
+	}
+	
 
 	@Override
 	public Noticia findById(int id) {
