@@ -26,7 +26,7 @@ public class CupomService implements CrudService<Cupom>{
 	
 	public List<Cupom> findByParceiro(String parceiro) {
 		List <Cupom> cupons = new ArrayList<>();
-		cupons.add(cupomRepository.findByParceiro(parceiro));
+		cupons.addAll(cupomRepository.findByParceiro(parceiro));
 		return cupons;
 	}
 
