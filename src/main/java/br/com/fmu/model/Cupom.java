@@ -17,15 +17,15 @@ public class Cupom {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(insertable = false, updatable = false)
-	int id;
+	private int id;
 	@Column
-	String parceiro;
+	private String parceiro;
 	@Column
-	String cupom;
+	private String cupom;
 	@Column
-	String validade;
+	private String validade;
 	@Column
-	String descricao;
+	private String descricao;
 	
 	public Cupom() {}
 	
