@@ -40,7 +40,6 @@ public class EventoMapper {
 			dataFormatada = fmt.parse(from.getData().toString());
 			model.setData(new SimpleDateFormat("dd/MM/yyyy").format(dataFormatada));
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

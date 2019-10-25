@@ -36,7 +36,7 @@ public class EventoController {
 	
 	@GetMapping("/listar/{dia}")
 	public ResponseEntity<List<EventoDto>> findByDia(@PathVariable("dia") int dia){
-		List<EventoDto> lista = EventoMapper.convertToListDto(eventoService.findByParceiro(dia));
+		List<EventoDto> lista = EventoMapper.convertToListDto(eventoService.findByDia(dia));
 		return new ResponseEntity<List<EventoDto>>(lista, HttpStatus.OK);
 	}
 

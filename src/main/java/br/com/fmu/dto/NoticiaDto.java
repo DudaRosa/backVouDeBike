@@ -8,12 +8,9 @@ public class NoticiaDto {
 	@SerializedName("id")
 	@JsonProperty("id")
 	private int id;
-	@SerializedName("dia")
-	@JsonProperty("dia")
-	private String dia;
-	@SerializedName("hora")
-	@JsonProperty("hora")
-	private String hora;
+	@SerializedName("data")
+	@JsonProperty("data")
+	private String data;
 	@SerializedName("titulo")
 	@JsonProperty("titulo")
 	private String titulo;
@@ -31,17 +28,11 @@ public class NoticiaDto {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getDia() {
-		return dia;
+	public String getData() {
+		return data;
 	}
-	public void setDia(String dia) {
-		this.dia = dia;
-	}
-	public String getHora() {
-		return hora;
-	}
-	public void setHora(String hora) {
-		this.hora = hora;
+	public void setData(String data) {
+		this.data = data;
 	}
 	public String getTitulo() {
 		return titulo;

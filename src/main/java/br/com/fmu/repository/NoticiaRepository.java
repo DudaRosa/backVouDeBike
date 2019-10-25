@@ -15,7 +15,7 @@ public interface NoticiaRepository extends CrudRepository<Noticia, Integer> {
 	@Query(value = "SELECT * FROM dbo.noticia", nativeQuery = true)
 	List<Noticia> findAll();
 	
-	@Query(value = "SELECT * FROM dbo.noticia WHERE DAY(CAST((dia) AS DATE)) = :dia", nativeQuery = true)
+	@Query(value = "SELECT * FROM dbo.noticia WHERE DAY(data) = :dia", nativeQuery = true)
 	List<Noticia> findbyDia(String dia);
 	
 

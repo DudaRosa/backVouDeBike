@@ -25,7 +25,8 @@ public class NoticiaService implements CrudService<Noticia> {
 	}
 	
 	public List<Noticia> findByDia(String dia) {
-		List<Noticia> noticias = noticiaRepository.findbyDia(dia);
+		List<Noticia> noticias = new ArrayList<>();
+		noticias.addAll(noticiaRepository.findbyDia(dia));
 		return noticias;
 	}
 	

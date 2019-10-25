@@ -24,7 +24,7 @@ public class EventoService implements CrudService<Evento> {
 		return eventos;
 	}
 	
-	public List<Evento> findByParceiro(int dia) {
+	public List<Evento> findByDia(int dia) {
 		List <Evento> eventos = new ArrayList<>();
 		eventos.addAll(eventoRepository.findbyDia(dia));
 		return eventos;

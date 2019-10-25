@@ -1,5 +1,7 @@
 package br.com.fmu.model;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,8 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 @Component
+@RequestScope
 @Entity
 @Table
 public class Cupom {
@@ -23,13 +27,13 @@ public class Cupom {
 	@Column
 	private String cupom;
 	@Column
-	private String validade;
+	private Date validade;
 	@Column
 	private String descricao;
 	
 	public Cupom() {}
 	
-	public Cupom(int id, String parceiro, String cupom, String validade, String descricao) {
+	public Cupom(int id, String parceiro, String cupom, Date validade, String descricao) {
 		super();
 		this.id = id;
 		this.parceiro = parceiro;
@@ -62,11 +66,11 @@ public class Cupom {
 		this.cupom = cupom;
 	}
 
-	public String getValidade() {
+	public Date getValidade() {
 		return validade;
 	}
 
-	public void setValidade(String validade) {
+	public void setValidade(Date validade) {
 		this.validade = validade;
 	}
 

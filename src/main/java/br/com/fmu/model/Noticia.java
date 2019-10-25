@@ -1,6 +1,8 @@
 
 package br.com.fmu.model;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 @Component
+@RequestScope
 @Entity
 @Table
 public class Noticia {
@@ -20,9 +24,7 @@ public class Noticia {
 	@Column(insertable = false, updatable = false)
 	private int id;
 	@Column
-	private String dia;
-	@Column
-	private String hora;
+	private Date data;
 	@Column
 	private String titulo;
 	@Column
@@ -32,11 +34,10 @@ public class Noticia {
 
 	public Noticia() {}
 
-	public Noticia(int id, String dia, String hora, String titulo, String texto, String link) {
+	public Noticia(int id, Date dia, String titulo, String texto, String link) {
 		super();
 		this.id = id;
-		this.dia = dia;
-		this.hora = hora;
+		this.data = dia;
 		this.titulo = titulo;
 		this.texto = texto;
 		this.link = link;
@@ -50,20 +51,12 @@ public class Noticia {
 		this.id = id;
 	}
 
-	public String getDia() {
-		return dia;
+	public Date getData() {
+		return data;
 	}
 
-	public void setDia(String dia) {
-		this.dia = dia;
-	}
-
-	public String getHora() {
-		return hora;
-	}
-
-	public void setHora(String hora) {
-		this.hora = hora;
+	public void setData(Date data) {
+		this.data = data;
 	}
 
 	public String getTitulo() {
@@ -89,5 +82,5 @@ public class Noticia {
 	public void setLink(String link) {
 		this.link = link;
 	}
-  }
- 
+	
+}
