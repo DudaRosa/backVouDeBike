@@ -1,6 +1,9 @@
 package br.com.fmu.mapper;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import br.com.fmu.dto.ForecastDto;
@@ -8,48 +11,54 @@ import br.com.fmu.model.Forecast;
 
 public class ForecastMapper {
 	
-	public static Forecast convertFromDto(ForecastDto from) {
-		if(from == null) {
-			return null;
-		}
-		Forecast model = new Forecast();
-		
-		model.setCondition(from.getCondition());
-		model.setDate(from.getDate());
-		model.setDescription(from.getDescription());
-		model.setMax(from.getMax());
-		model.setMin(from.getMin());
-		model.setWeekday(from.getWeekday());
-
-		return model;
-	}
+	/*
+	 * public static Forecast convertFromDto(ForecastDto from) { if(from == null) {
+	 * return null; } Forecast model = new Forecast();
+	 * 
+	 * model.setCondition(from.getCondition()); model.setDate(from.getDate());
+	 * model.setDescription(from.getDescription()); model.setMax(from.getMax());
+	 * model.setMin(from.getMin()); model.setWeekday(from.getWeekday());
+	 * 
+	 * return model; }
+	 */
 	
 	public static ForecastDto convertToDto(Forecast from) {
 		if(from == null) {
 			return null;
 		}
-		ForecastDto conf = new ForecastDto();
+		ForecastDto model = new ForecastDto();
 		
-		conf.setCondition(from.getCondition());
-		conf.setDate(from.getDate());
-		conf.setDescription(from.getDescription());
-		conf.setMax(from.getMax());
-		conf.setMin(from.getMin());
-		conf.setWeekday(from.getWeekday());
+		model.setId(from.getId());
+		
+		model.setCondition(from.getCondition());
+		model.setDescription(from.getDescription());
+		model.setMax(from.getMax());
+		model.setMin(from.getMin());
+		model.setWeekday(from.getWeekday());
+		
+		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+		Date dataFormatada = new Date();
 
-		return conf;
-	}
-	
-	public static List<Forecast> convertToListEntity(List<ForecastDto> lstDto) {
-		List<Forecast> lstSaida = new ArrayList<Forecast>(); 
-		if(lstDto != null) {
-			for(int i = 0; i < lstDto.size(); i++) {
-				lstSaida.add(convertFromDto(lstDto.get(i)));
-			}
+		try {
+			dataFormatada = fmt.parse(from.getDate().toString());
+			model.setDate(new SimpleDateFormat("dd/MM/yyyy").format(dataFormatada));
+		} catch (ParseException e) {
+			e.printStackTrace();
 		}
 		
-		return lstSaida;
+		/* model.setClima(ClimaMapper.convertToDto((from.getClima()))); */
+
+		return model;
 	}
+	
+	/*
+	 * public static List<Forecast> convertToListEntity(List<ForecastDto> lstDto) {
+	 * List<Forecast> lstSaida = new ArrayList<Forecast>(); if(lstDto != null) {
+	 * for(int i = 0; i < lstDto.size(); i++) {
+	 * lstSaida.add(convertFromDto(lstDto.get(i))); } }
+	 * 
+	 * return lstSaida; }
+	 */
 	
 	public static List<ForecastDto> convertToListDto(List<Forecast> lstEntity) {
 		List<ForecastDto> lstSaida = new ArrayList<ForecastDto>(); 

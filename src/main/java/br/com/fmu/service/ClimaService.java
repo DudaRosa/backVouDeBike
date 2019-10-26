@@ -11,10 +11,14 @@ import br.com.fmu.repository.ClimaRepository;
 import br.com.fmu.service.interfaces.CrudService;
 
 @Service
-public class ClimaService implements CrudService<Clima>{
-	
+public class ClimaService implements CrudService<Clima> {
+
 	@Autowired
 	private ClimaRepository climaRepository;
+
+	@Autowired
+	private ForecastService forecastService;
+	
 
 	@Override
 	public List<Clima> findAll() {
@@ -23,24 +27,32 @@ public class ClimaService implements CrudService<Clima>{
 		return climas;
 	}
 
-	
-	@Override
-	public Clima findById(int id) { 
-		Clima clima = climaRepository.findById(id);
-		return clima; 
+	public List<Clima> findByDia(int dia) {
+		List<Clima> climas = new ArrayList<>();
+		climas.addAll(climaRepository.findByDia(dia));
+		for (Clima clima : climas) {
+			clima.setForecast(forecastService.findAllById(clima.getId()));
+		}
+		return climas;
 	}
-	 
+
+	@Override
+	public Clima findById(int id) {
+		Clima clima = climaRepository.findById(id);
+		clima.setForecast(forecastService.findAllById(clima.getId()));
+		return clima;
+	}
 
 	@Override
 	public boolean save(Clima objeto) {
-        climaRepository.save(objeto);
-        return true;
+		climaRepository.save(objeto);
+		return true;
 	}
-	
+
 	@Override
 	public void update(Clima objeto) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

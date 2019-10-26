@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.fmu.dto.ClimaDto;
+import br.com.fmu.mapper.ClimaMapper;
 import br.com.fmu.model.Clima;
 import br.com.fmu.service.ClimaService;
 
@@ -25,15 +27,21 @@ public class ClimaController {
 	private ClimaService climaService;
 
 	@GetMapping("/listar")
-	public ResponseEntity<List<Clima>> findAll() {
-		List<Clima> lista = climaService.findAll();
-		return new ResponseEntity<List<Clima>>(lista, HttpStatus.OK);
+	public ResponseEntity<List<ClimaDto>> findAll() {
+		List<ClimaDto> lista = ClimaMapper.convertToListDto(climaService.findAll());
+		return new ResponseEntity<List<ClimaDto>>(lista, HttpStatus.OK);
+	}
+	
+	@GetMapping("/listar/{dia}")
+	public ResponseEntity<List<ClimaDto>> findByDia(@PathVariable("dia") int dia) {
+		List<ClimaDto> lista = ClimaMapper.convertToListDto(climaService.findByDia(dia));
+		return new ResponseEntity<List<ClimaDto>>(lista, HttpStatus.OK);
 	}
 
 	@GetMapping("/selecionar/{id}")
-	public ResponseEntity<Clima> findById(@PathVariable("id") int id) {
-		Clima clima = climaService.findById(id);
-		return new ResponseEntity<Clima>(clima, HttpStatus.OK);
+	public ResponseEntity<ClimaDto> findById(@PathVariable("id") int id) {
+		ClimaDto clima = ClimaMapper.convertToDto(climaService.findById(id));
+		return new ResponseEntity<ClimaDto>(clima, HttpStatus.OK);
 	}
 
 	@PostMapping("/inserir")
