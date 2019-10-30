@@ -1,9 +1,6 @@
 package br.com.fmu.mapper;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import br.com.fmu.dto.ClimaDto;
@@ -46,15 +43,28 @@ public class ClimaMapper {
 		model.setTime(from.getTime());
 		model.setWind_speedy(from.getWindSpeedy());
 		
-		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-		Date dataFormatada = new Date();
+		
 
-		try {
-			dataFormatada = fmt.parse(from.getDate().toString());
-			model.setDate(new SimpleDateFormat("dd/MM/yyyy").format(dataFormatada));
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		
+		  /*SimpleDateFormat*/
+		  
+		  /*SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd"); Date dataFormatada
+		  = fmt.parse(from.getDate().toString()); model.setDate(new
+		  SimpleDateFormat("dd/MM/yyyy").format(dataFormatada));*/
+		 
+		
+		
+		/* DateTimeFormatter */
+		  
+		
+		/*
+		 * DateTimeFormatter fmt = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+		 * LocalDate data = LocalDate.parse(from.getDate().toString()); String
+		 * dataFormatada = data.format(fmt);
+		 */
+		 
+		
+		model.setDate(from.getDate());
 		
 		model.setForecast(ForecastMapper.convertToListDto(from.getForecast()));
 		

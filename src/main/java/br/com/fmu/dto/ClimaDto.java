@@ -1,5 +1,6 @@
 package br.com.fmu.dto;
 
+import java.sql.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -17,7 +18,7 @@ public class ClimaDto {
 	
 	@SerializedName("date")
 	@JsonProperty("date")
-	private String date;
+	private Date date;
 	
 	@SerializedName("time")
 	@JsonProperty("time")
@@ -72,11 +73,11 @@ public class ClimaDto {
 		this.temp = temp;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 

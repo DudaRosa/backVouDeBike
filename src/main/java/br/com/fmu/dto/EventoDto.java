@@ -1,5 +1,7 @@
 package br.com.fmu.dto;
 
+import java.sql.Date;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
@@ -11,7 +13,7 @@ public class EventoDto {
 	private int id;
 	@SerializedName("data")
 	@JsonProperty("data")
-	private String data;
+	private Date data;
 	@SerializedName("nome")
 	@JsonProperty("nome")
 	private String nome;
@@ -30,11 +32,11 @@ public class EventoDto {
 		this.id = id;
 	}
 
-	public String getData() {
+	public Date getData() {
 		return data;
 	}
 
-	public void setData(String date) {
+	public void setData(Date date) {
 		this.data = date;
 	}
 

@@ -1,9 +1,6 @@
 package br.com.fmu.mapper;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import br.com.fmu.dto.EventoDto;
@@ -32,16 +29,16 @@ public class EventoMapper {
 		model.setId(from.getId());
 		model.setNome(from.getNome());
 		model.setDescricao(from.getDescricao());
-
-		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-		Date dataFormatada = new Date();
-
-		try {
-			dataFormatada = fmt.parse(from.getData().toString());
-			model.setData(new SimpleDateFormat("dd/MM/yyyy").format(dataFormatada));
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		model.setData(from.getData());
+		
+		/*
+		 * SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd"); Date dataFormatada
+		 * = new Date();
+		 * 
+		 * try { dataFormatada = fmt.parse(from.getData().toString()); model.setData(new
+		 * SimpleDateFormat("dd/MM/yyyy").format(dataFormatada)); } catch
+		 * (ParseException e) { e.printStackTrace(); }
+		 */
 
 		return model;
 	}

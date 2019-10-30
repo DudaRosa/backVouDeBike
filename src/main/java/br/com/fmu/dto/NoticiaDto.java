@@ -20,6 +20,9 @@ public class NoticiaDto {
 	@SerializedName("link")
 	@JsonProperty("link")
 	private String link;
+	@SerializedName("img")
+	@JsonProperty("img")
+	private String img;
 	
 	
 	public int getId() {
@@ -51,6 +54,12 @@ public class NoticiaDto {
 	}
 	public void setLink(String link) {
 		this.link = link;
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
 	}
 	
 }

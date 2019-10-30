@@ -34,6 +34,7 @@ public class NoticiaMapper {
 		model.setLink(from.getLink());
 		model.setTexto(from.getTexto());
 		model.setTitulo(from.getTitulo());
+		model.setImg(from.getImg());
 		
 		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
 		Date dataFormatada = new Date();

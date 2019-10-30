@@ -1,9 +1,9 @@
 package br.com.fmu.mapper;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import br.com.fmu.dto.CupomDto;
@@ -36,13 +36,14 @@ public class CupomMapper {
 		model.setParceiro(from.getParceiro());
 
 		if (from.getValidade() != null) {
-			SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-			Date dataFormatada = new Date();
-
+			/* model.setValidade((LocalDate.parse(from.getValidade().toString())).format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT))); */
 			try {
-				dataFormatada = fmt.parse(from.getValidade().toString());
-				model.setValidade(new SimpleDateFormat("dd/MM/yyyy").format(dataFormatada));
-			} catch (ParseException e) {
+				DateTimeFormatter fmt = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+				LocalDate data = LocalDate.parse(from.getValidade().toString());
+				String dataFormatada = data.format(fmt);
+				model.setValidade(dataFormatada);
+				
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			

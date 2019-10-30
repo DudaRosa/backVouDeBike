@@ -31,16 +31,20 @@ public class Noticia {
 	private String texto;
 	@Column
 	private String link;
+	@Column
+	private String img;
+	
 
 	public Noticia() {}
 
-	public Noticia(int id, Date dia, String titulo, String texto, String link) {
+	public Noticia(int id, Date dia, String titulo, String texto, String link,String img) {
 		super();
 		this.id = id;
 		this.data = dia;
 		this.titulo = titulo;
 		this.texto = texto;
 		this.link = link;
+		this.img = img;
 	}
 
 	public int getId() {
@@ -81,6 +85,14 @@ public class Noticia {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 	
 }

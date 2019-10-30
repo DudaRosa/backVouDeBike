@@ -1,5 +1,7 @@
 package br.com.fmu.dto;
 
+import java.sql.Date;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
@@ -11,7 +13,7 @@ public class ForecastDto {
 	
 	@SerializedName("date")
 	@JsonProperty("date")
-	private String date;
+	private Date date;
 	
 	@SerializedName("weekday")
 	@JsonProperty("weekday")
@@ -42,11 +44,11 @@ public class ForecastDto {
 		this.id = id;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
