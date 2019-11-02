@@ -1,69 +1,61 @@
 package br.com.fmu.dto;
 
-import java.sql.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ClimaDto {
-	
-	@SerializedName("id")
-	@JsonProperty("id")
-	private int id;
-	
+
 	@SerializedName("temp")
 	@JsonProperty("temp")
 	private int temp;
-	
+
 	@SerializedName("date")
 	@JsonProperty("date")
-	private Date date;
-	
+	private String date;
+
 	@SerializedName("time")
 	@JsonProperty("time")
 	private String time;
-	
+
 	@SerializedName("description")
 	@JsonProperty("description")
 	private String description;
-	
+
 	@SerializedName("currently")
 	@JsonProperty("currently")
 	private String currently;
-	
+
 	@SerializedName("humidity")
 	@JsonProperty("humidity")
 	private int humidity;
-	
+
 	@SerializedName("wind_speedy")
 	@JsonProperty("wind_speedy")
 	private String wind_speedy;
-	
+
 	@SerializedName("sunrise")
 	@JsonProperty("sunrise")
 	private String sunrise;
-	
+
 	@SerializedName("sunset")
 	@JsonProperty("sunset")
 	private String sunset;
 	
+	@SerializedName("condition_slug")
+	@JsonProperty("condition_slug")
+	private String condition_slug;
+
 	@SerializedName("city_name")
 	@JsonProperty("city_name")
 	private String city_name;
-	
+
 	@SerializedName("forecast")
 	@JsonProperty("forecast")
 	private List<ForecastDto> forecast;
-	
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public int getTemp() {
 		return temp;
@@ -73,11 +65,11 @@ public class ClimaDto {
 		this.temp = temp;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
@@ -135,6 +127,14 @@ public class ClimaDto {
 
 	public void setSunset(String sunset) {
 		this.sunset = sunset;
+	}
+
+	public String getCondition_slug() {
+		return condition_slug;
+	}
+
+	public void setCondition_slug(String condition_slug) {
+		this.condition_slug = condition_slug;
 	}
 
 	public String getCity_name() {
