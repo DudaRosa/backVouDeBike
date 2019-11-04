@@ -1,41 +1,40 @@
 package br.com.fmu.dto;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MapaDto {
-
+public class PassosDto {
+	
 	@SerializedName("distance")
 	@JsonProperty("distance")
 	private DistanciaDto distance;
-
+	
 	@SerializedName("duration")
 	@JsonProperty("duration")
 	private DuracaoDto duration;
-
-	@SerializedName("end_address")
-	@JsonProperty("end_address")
-	private String end_address;
-
+	
 	@SerializedName("end_location")
 	@JsonProperty("end_location")
 	private DestinoDto end_location;
-
-	@SerializedName("start_address")
-	@JsonProperty("start_address")
-	private String start_address;
-
+	
+	@SerializedName("html_instructions")
+	@JsonProperty("html_instructions")
+	private String html_instructions;
+	
+	@SerializedName("polyline")
+	@JsonProperty("polyline")
+	private PolylineDto polyline;
+	
 	@SerializedName("start_location")
 	@JsonProperty("start_location")
 	private PartidaDto start_location;
-
-	@SerializedName("steps")
-	@JsonProperty("steps")
-	private List<PassosDto> steps;
+	
+	@SerializedName("travel_mode")
+	@JsonProperty("travel_mode")
+	private String travel_mode;
+	
 
 	public DistanciaDto getDistance() {
 		return distance;
@@ -53,14 +52,6 @@ public class MapaDto {
 		this.duration = duration;
 	}
 
-	public String getEnd_address() {
-		return end_address;
-	}
-
-	public void setEnd_address(String end_address) {
-		this.end_address = end_address;
-	}
-
 	public DestinoDto getEnd_location() {
 		return end_location;
 	}
@@ -69,12 +60,20 @@ public class MapaDto {
 		this.end_location = end_location;
 	}
 
-	public String getStart_address() {
-		return start_address;
+	public String getHtml_instructions() {
+		return html_instructions;
 	}
 
-	public void setStart_address(String start_address) {
-		this.start_address = start_address;
+	public void setHtml_instructions(String html_instructions) {
+		this.html_instructions = html_instructions;
+	}
+
+	public PolylineDto getPolyline() {
+		return polyline;
+	}
+
+	public void setPolyline(PolylineDto polyline) {
+		this.polyline = polyline;
 	}
 
 	public PartidaDto getStart_location() {
@@ -85,12 +84,12 @@ public class MapaDto {
 		this.start_location = start_location;
 	}
 
-	public List<PassosDto> getSteps() {
-		return steps;
+	public String getTravel_mode() {
+		return travel_mode;
 	}
 
-	public void setSteps(List<PassosDto> steps) {
-		this.steps = steps;
+	public void setTravel_mode(String travel_mode) {
+		this.travel_mode = travel_mode;
 	}
-
+	
 }
