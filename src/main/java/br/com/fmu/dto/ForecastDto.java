@@ -5,10 +5,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class ForecastDto {
 	
-	@SerializedName("id")
-	@JsonProperty("id")
-	private int id;
-	
 	@SerializedName("date")
 	@JsonProperty("date")
 	private String date;
@@ -33,14 +29,6 @@ public class ForecastDto {
 	@JsonProperty("condition")
 	private String condition;
 
-	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getDate() {
 		return date;

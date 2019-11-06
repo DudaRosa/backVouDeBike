@@ -28,7 +28,7 @@ public class Noticia {
 	@Column
 	private String titulo;
 	@Column
-	private String texto;
+	private String descricao;
 	@Column
 	private String link;
 	@Column
@@ -37,59 +37,71 @@ public class Noticia {
 
 	public Noticia() {}
 
-	public Noticia(int id, Date dia, String titulo, String texto, String link,String img) {
+
+	public Noticia(int id, String titulo, String descricao, String link, String img) {
 		super();
 		this.id = id;
-		this.data = dia;
 		this.titulo = titulo;
-		this.texto = texto;
+		this.descricao = descricao;
 		this.link = link;
 		this.img = img;
 	}
+
 
 	public int getId() {
 		return id;
 	}
 
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 
 	public Date getData() {
 		return data;
 	}
 
+
 	public void setData(Date data) {
 		this.data = data;
 	}
+
 
 	public String getTitulo() {
 		return titulo;
 	}
 
+
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
-	public String getTexto() {
-		return texto;
+
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setTexto(String texto) {
-		this.texto = texto;
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
+
 
 	public String getLink() {
 		return link;
 	}
 
+
 	public void setLink(String link) {
 		this.link = link;
 	}
 
+
 	public String getImg() {
 		return img;
 	}
+
 
 	public void setImg(String img) {
 		this.img = img;

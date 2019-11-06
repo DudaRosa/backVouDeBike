@@ -14,9 +14,9 @@ public class NoticiaDto {
 	@SerializedName("titulo")
 	@JsonProperty("titulo")
 	private String titulo;
-	@SerializedName("texto")
-	@JsonProperty("texto")
-	private String texto;
+	@SerializedName("descricao")
+	@JsonProperty("descricao")
+	private String descricao;
 	@SerializedName("link")
 	@JsonProperty("link")
 	private String link;
@@ -43,11 +43,12 @@ public class NoticiaDto {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public String getTexto() {
-		return texto;
+	
+	public String getDescricao() {
+		return descricao;
 	}
-	public void setTexto(String texto) {
-		this.texto = texto;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	public String getLink() {
 		return link;

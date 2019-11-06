@@ -32,7 +32,7 @@ public class NoticiaMapper {
 		model.setId(from.getId());
 		
 		model.setLink(from.getLink());
-		model.setTexto(from.getTexto());
+		model.setDescricao(from.getDescricao());
 		model.setTitulo(from.getTitulo());
 		model.setImg(from.getImg());
 		
