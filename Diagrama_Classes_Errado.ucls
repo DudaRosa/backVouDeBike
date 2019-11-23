@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="br.com.fmu.model.Evento" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/model/Evento.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="322" width="194" x="315" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="br.com.fmu.model.Cupom" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/model/Cupom.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="376" width="234" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="br.com.fmu.model.Noticia" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/model/Noticia.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="430" width="240" x="969" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="br.com.fmu.dto.ClimaDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/ClimaDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="718" width="237" x="1718" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="br.com.fmu.dto.GeometriaDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/GeometriaDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="223" x="2161" y="795"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="br.com.fmu.dto.ForecastDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/ForecastDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="412" width="177" x="1695" y="795"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="br.com.fmu.dto.CoordenadasDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/CoordenadasDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="144" x="2161" y="1247"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="br.com.fmu.dto.DestinoDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/DestinoDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="137" x="1303" y="1247"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="br.com.fmu.dto.EventoDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/EventoDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="304" width="170" x="1249" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="br.com.fmu.dto.DistanciaDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/DistanciaDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="136" x="1657" y="1247"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="br.com.fmu.dto.ComponenteEnderecoDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/ComponenteEnderecoDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="250" width="209" x="1912" y="795"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="br.com.fmu.dto.LocalDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/LocalDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="214" width="389" x="1995" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="br.com.fmu.dto.NoticiaDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/NoticiaDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="412" width="170" x="759" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="br.com.fmu.dto.PartidaDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/PartidaDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="137" x="1480" y="1247"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="br.com.fmu.dto.PolylineDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/PolylineDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="149" x="1114" y="1247"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="br.com.fmu.dto.CupomDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/CupomDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="358" width="170" x="549" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="br.com.fmu.dto.MapaDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/MapaDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="376" width="219" x="1459" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="br.com.fmu.dto.DuracaoDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/DuracaoDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="136" x="938" y="1247"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="br.com.fmu.dto.PassosDto" project="Vou_De_Bike_2" 
+    file="/Vou_De_Bike_2/src/main/java/br/com/fmu/dto/PassosDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="376" width="219" x="1219" y="795"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="20">    
+    <bendpoint x="1567" y="795"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="21" name="distance"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="24" name="address_components"/>      
+      <multiplicity id="25" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <bendpoint x="1468" y="795"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="27" name="end_location"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="30" name="geometry"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="33" name="duration"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="36" name="start_location"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="39" name="forecast"/>      
+      <multiplicity id="40" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <bendpoint x="1188" y="795"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="42" name="duration"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="45" name="distance"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="48" name="location"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="51" name="steps"/>      
+      <multiplicity id="52" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="54" name="polyline"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="57" name="end_location"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="59">    
+    <bendpoint x="1489" y="795"/>    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="60" name="start_location"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

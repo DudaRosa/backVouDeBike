@@ -27,7 +27,7 @@ public class Evento {
 	private Date data;
 	@Column
 	private String nome;
-	@Column
+	@Column(length = 1000)
 	private String descricao;
 
 	public Evento() {
