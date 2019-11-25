@@ -26,7 +26,7 @@ public class MapaService {
 	
 	public List<MapaDto> traceRoute(String origem, String destino) {
 		
-		String mapaUri = "https://maps.googleapis.com/maps/api/directions/json?origin=".concat(origem).concat("&destination=").concat(destino).concat("&key=AIzaSyCpj2qNzlBwvWbYFnUBHoxXg6sacPkgOWk");
+		String mapaUri = "https://maps.googleapis.com/maps/api/directions/json?origin=".concat(origem).concat("&destination=").concat(destino).concat("&mode=bicycling").concat("&key=AIzaSyCpj2qNzlBwvWbYFnUBHoxXg6sacPkgOWk");
 		
 		HttpHeaders headers = new HttpHeaders();
 		
